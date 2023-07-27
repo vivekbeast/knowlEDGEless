@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Martian+Mono:wght@600&family=Play:wght@700&display=swap');
+        /* font-family: 'Lilita One',
+        cursive;
+    
+        font-family: 'Martian Mono',
+        monospace;
+    
+        font-family: 'Play',
+        sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline:0;
+    appearance: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+html{
+    font-size: 14px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Lilita One',cursive;
+    font-size: 0.88rem;
+    /* user-select: none; */
+    overflow-x: hidden;
+    background-color: #f6f6f9;
+    /* #FF0060
+    #1B9CB5
+    #F7D060
+    #7dBda1
+    #363949
+    #677483
+    #f6f6f9
+    #6C9BCF */
+}
+.mainlogo{
+    display: block;
+    object-fit: cover;
+    width: 4rem;
+    height: 4rem;
+}
+.closingimg{
+    width: 1.1rem;
+    height: 1.1rem;
+    display: none;
+    transition: all 0.5s ease;
+}
+.openingimg{
+    width: 1.4rem;
+    height: 1.4rem;
+    display:flex;
+    transition: all 0.5s ease;
+}
+aside{
+    height: 100vh;
+    position: fixed;
+    /* width: 100%; */
+}
+aside .toogle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+    box-shadow: 2px 4px 8px gray;
+    width: max-content;
+    border-radius: 15px;
+    background-color: #fff;
+}
+aside .toogle .logo{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-right: 13px;
+}
+aside .toogle .close{
+    display: flex;
+    padding-right: 1rem;
+}
+.slidebar{
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 2px 5px 9px gray;
+    border-radius: 15px;
+    height: 90%;
+    position: relative;
+    top: 1.5rem;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.slidebar:hover{
+    box-shadow: none;
+}
+.slidebar a{
+    display: flex;
+    align-items: center;
+    height: 3.7rem;
+    gap: 1rem;
+    position: relative;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border-radius: 15px 15px 0 0;
+}
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+    font-family: 'Play',sans-serif;
+}
+h3{
+    font-weight: 100;
+    font-size: 1.2rem;
+    font-family: 'Martian Mono',monospace;
+    color: rgb(92, 91, 91);
+}
+h3:hover{
+    color: rgb(129, 128, 128);
+    transition: all 0.3s ease;
+}
+#about{
+    color: #88b675;
+    font-size: x-large;
+    transition: all 0.3s ease;
+}
+
+#face {
+    color: #1877F2;
+    font-size: x-large;
+    transition: all 0.3s ease;
+}
+
+#insta {
+    color: #E4405F;
+    font-size: x-large;
+    transition: all 0.3s ease;
+}
+
+#you {
+    color: #FF0000;
+    font-size: x-large;
+    transition: all 0.3s ease;
+}
+.container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem auto 23rem;
+}
+aside .slidebar a.active{
+    width: 100%;
+    color: #000000;
+    background-color: rgba(212, 209, 209, 0.889);
+    margin-left: 0;
+}
+aside .slidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 18px;
+    background-color: #222322;
+    border-radius: 5px;
+}
+aside .slidebar a:hover i{
+    margin-left: 0.5rem;
+}
+/* @media (max-width: 768px) {
+
+    /* Styles for mobile devices */
+    /* .toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .close {
+        display: none;
+    }
+
+    .openingimg {
+        display: block;
+    }
+
+    .slidebar {
+        display: none;
+    } */
+
+    /* Additional mobile styles as needed */
+
+    section{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+        box-sizing: border-box;
+        gap: 5%;
+    }
+    /* section div{
+        width: 100%;
+            border: 2px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 450px;
+
+    } */
+section div iframe{
+    box-shadow: 5px 5px 14px 5px rgb(92, 91, 91);
+        /* border-radius: 15px; */
+    transition: all 0.4s ease;
+    border: 1px solid;
+    border-radius: 12px;
+}
+iframe:hover{
+    box-shadow: 5px 5px 1px 5px rgb(255, 255, 255);
+}
+@media (max-width: 768px) {
+    section{
+        width: 100%;
+        display: grid;
+        align-items: center;
+        margin-top: 30%;
+        justify-content: center;
+    }
+    iframe{
+        width: 100%;
+        height: auto;
+    }
+    aside{
+        width: 95%;
+        border-radius: 0px;
+    }
+    aside .toogle{
+        width: 100%;
+    }
+    .slidebar{
+        width: max-content;
+    }
+}
